@@ -1,0 +1,24 @@
+name: 🌊 Botič scraper
+on:
+  schedule:
+    - cron: '0 5 * * *'
+  workflow_dispatch:
+jobs:
+  scrape-data:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 🪚 Checkout the repo
+        uses: actions/checkout@v3
+      
+      - name: 🫡 Scrape web
+        run: |
+          python3 scrape.py
+
+      - name: 📅 Get current date
+        id: date
+        run: echo "::set-output name=date::$(date +'%Y-%m-%d')"
+
+      - name: ♻️ Sync data
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          message: 'Add data from ${{ steps.date.outputs.date }}'
