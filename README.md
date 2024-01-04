@@ -6,8 +6,8 @@
 
 Skript sleduje tyto parametry
  - Datum a čas
- - Stav [$cm$]
- - Průtok [$m^3s^{-1}$]
- - Teplota [$°C$]
+ - Stav $cm$
+ - Průtok $m^3s^{-1}$
+ - Teplota $°C$
 
 Mereni spusteno 1. 4. 2024 s pravidelnosti jednoho dne.
