@@ -23,7 +23,7 @@ for i in range(len(data)):
    for j in range(len(data[i])):
       data[i][j] = data[i][j].text
 
-filename = date.today().strftime('%Y-%m-%d') + ".csv"
+filename = "data/" + date.today().strftime('%Y-%m-%d') + ".csv"
 
 with open(filename, 'w', newline='') as csvfile:
    w = csv.writer(csvfile, delimiter=',')
