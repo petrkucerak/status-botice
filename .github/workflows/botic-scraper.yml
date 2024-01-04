@@ -12,6 +12,7 @@ jobs:
       
       - name: 🫡 Scrape web
         run: |
+          pip install BeautifulSoup
           python3 scrape.py
 
       - name: 📅 Get current date
